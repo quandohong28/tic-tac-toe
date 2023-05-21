@@ -37,6 +37,7 @@
     border-radius: 10px;
     margin-top: 50px;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .game-reset-btn:hover {
