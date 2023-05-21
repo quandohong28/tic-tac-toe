@@ -29,6 +29,10 @@ export default function Game() {
     // }
   }
 
+  else {
+    alert('tie')
+  }
+
 
   const handleReset = () => {
     setBoard(initEmptyBoard)
