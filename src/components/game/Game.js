@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Board from './Board'
 import './style.css'
 import { findWinner } from './logic'
@@ -29,12 +29,6 @@ export default function Game() {
     // }
   }
 
-  for (let cell = 0; cell < board.length; cell++) {
-    if(!winner && cell !== null) {
-      alert('tie')
-    }
-    
-  }
 
 
   const handleReset = () => {
