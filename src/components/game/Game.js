@@ -29,8 +29,11 @@ export default function Game() {
     // }
   }
 
-  else {
-    alert('tie')
+  for (let cell = 0; cell < board.length; cell++) {
+    if(!winner && cell !== null) {
+      alert('tie')
+    }
+    
   }
 
 
