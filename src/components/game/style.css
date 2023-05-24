@@ -2,6 +2,10 @@
     font-family: 'Arial';
 }
 
+html {
+    transition: background 500ms;
+}
+
 .game {
     position: relative;
     text-align: center;
@@ -39,7 +43,6 @@
     margin: 50px;
     cursor: pointer;
     font-size: 16px;
-    box-shadow: 0px 0px 4px 4px;
 }
 
 /* .game-reset-btn:hover {
@@ -47,7 +50,7 @@
     transition: all 400ms;
 } */
 
-.game-reset-btn:active {
+.game-reset-btn:hover {
     transform: scale(110%);
     transition: all 400ms;
 }
