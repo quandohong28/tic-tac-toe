@@ -8,8 +8,6 @@ export default function Cell({ value, onClick }) {
 
     else if (value === 'o')
         cell.current.style.color = 'red'
-
-
     return (
         <div
             className='game-cell'

@@ -1,7 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import Board from './Board'
 import './style.css'
 import { findWinner } from './logic'
+import Theme from './Theme';
 
 var x = 0;
 var o = 0;
@@ -22,22 +23,25 @@ export default function Game() {
 
   if (winner) {
     // alert(!isNext ? 'X is Winner' : 'O is Winner')
-    if(!isNext) {
+    if (!isNext) {
       alert('X is Winner')
       x++
+      localStorage.setItem('person1', x)
+
     }
     else {
       alert('O is Winner')
       o++
+      localStorage.setItem('person2', o)
+
     }
   }
 
-
-
-  const handleReset = () => {
+  const handleRestart = () => {
     setBoard(initEmptyBoard)
     setIsNext(true)
   }
+
 
   return (
     <div className='game'>
@@ -46,17 +50,18 @@ export default function Game() {
         <Board cells={board} onClick={handleClick} />
         <button
           className='game-reset-btn'
-          onClick={handleReset}
+          onClick={handleRestart}
         >
           Restart
         </button>
 
         <div className='point'>
           <h3>Point:</h3>
-          <h4 style={{ display: 'inline', marginRight: '100px' }}>X: {x} points</h4>
-          <h4 style={{ display: 'inline' }}>O: {o} points</h4>
+          <h4 style={{ display: 'inline', marginRight: '100px' }}>X: {localStorage.getItem('person1') ? localStorage.getItem('person1') : x} points</h4>
+          <h4 style={{ display: 'inline' }}>O: {localStorage.getItem('person2') ? localStorage.getItem('person2') : o} points</h4>
         </div>
       </>
+      <Theme />
     </div>
   )
 }

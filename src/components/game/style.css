@@ -3,6 +3,7 @@
 }
 
 .game {
+    position: relative;
     text-align: center;
     margin-top: 100px;
 }
@@ -22,7 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     border: 1px solid rgb(140, 213, 221);
     cursor: pointer;
@@ -35,7 +36,7 @@
     height: 40px;
     width: 100px;
     border-radius: 10px;
-    margin-top: 50px;
+    margin: 50px;
     cursor: pointer;
     font-size: 16px;
 }
@@ -46,4 +47,34 @@
 
 .game-reset-btn:active {
     background-color: #2b9cff;
+}
+
+.button-area {
+    height: 30px;
+    width: 80px;
+    background-color: #cbcbcb;
+    border-radius: 100px;
+    padding: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: -70px;
+    right: 50px;
+}  
+
+
+.active {
+    background-color: white !important;
+    translate: 50px;
+}
+
+.switch {
+    height: 30px;
+    width: 30px;
+    background-color: #000000;
+    border-radius: 100%;
+}
+
+.dark {
+    color: rgb(255, 255, 255);
+    background-color: #242439;
 }
